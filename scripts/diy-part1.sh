@@ -21,3 +21,4 @@
 sed -i '1i src-git passwall_packages https://github.com/Openwrt-Passwall/openwrt-passwall-packages.git;main' feeds.conf.default
 sed -i '2i src-git passwall_luci https://github.com/Openwrt-Passwall/openwrt-passwall.git;main' feeds.conf.default
 sed -i '3i src-git OpenClash https://github.com/vernesong/openclash.git;master' feeds.conf.default
+echo 'src-git daed https://github.com/daeuniverse/daed-openwrt.git' >>feeds.conf.default
