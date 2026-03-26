@@ -25,3 +25,9 @@ sed -i '/^exit 0$/i sed -i "s,mt7981,filogic,g" "package/base-files/files/etc/op
 
 # 固件版本名称自定义
 # sed -i "s/DISTRIB_DESCRIPTION=.*/DISTRIB_DESCRIPTION='ImmortalWrt By 3rd-eyes $(date +"%Y%m%d")'/g" package/base-files/files/etc/openwrt_release
+
+# 添加 daed 和它的核心依赖
+echo "CONFIG_PACKAGE_daed=y" >> .config
+echo "CONFIG_PACKAGE_luci-app-daed=y" >> .config
+echo "CONFIG_PACKAGE_kmod-sched-bpf=y" >> .config
+echo "CONFIG_PACKAGE_kmod-xdp-sockets-diag=y" >> .config
